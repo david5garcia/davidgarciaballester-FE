@@ -1,4 +1,3 @@
-import React, { useEffect, useRef } from "react";
 import styles from "../Technologies.module.scss";
 import Logo from "./Logo";
 

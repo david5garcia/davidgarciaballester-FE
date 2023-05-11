@@ -1,7 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
 import styles from "../Hero.module.scss";
-import Lottie from "lottie-react";
-import animationData from "../../../assets/arrow-down.json";
 import ArrowLottie from "./ArrowLottie";
 
 const Hero = () => {
