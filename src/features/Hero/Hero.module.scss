@@ -35,6 +35,16 @@
   }
 }
 
+.buttonCv {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: blueviolet;
+  color: white;
+}
+
 @media (max-width: 768px) {
   .heroContainer {
     grid-template-columns: 1fr;
