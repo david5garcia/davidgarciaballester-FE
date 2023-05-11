@@ -13,7 +13,7 @@ const Hero = () => {
         </h3>
       </div>
 
-      <img src="/src/assets/me.png" alt="" className={`${styles.image}`} />
+      <img src="/public/images/me.png" alt="" className={`${styles.image}`} />
       <ArrowLottie />
     </div>
   );

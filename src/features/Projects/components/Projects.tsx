@@ -1,6 +1,6 @@
 const Projects = () => {
   return (
-    <div>
+    <div className="mt-96">
       
     </div>
   )
