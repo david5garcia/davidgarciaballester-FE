@@ -8,10 +8,10 @@ export const Navbar = () => {
       <Hamburger />
       <div className="flex h-10 items-center gap-2">
         <span className={`${styles["nav-items"]} px-5 py-2 rounded-lg`}>
-          projects
+          technologies
         </span>
         <span className={`${styles["nav-items"]} px-5 py-2 rounded-lg`}>
-          cv
+          projects
         </span>
         <span className={`${styles["nav-items"]} px-5 py-2 rounded-lg mr-12`}>
           about me

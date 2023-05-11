@@ -4,7 +4,9 @@ const Hero = () => {
   return (
     <div className={`${styles.heroContainer} sm:mt-12 mt-6`}>
       <div>
-        <h1 className={`${styles.heroTitle}`}>Hi there! I'm David 👋</h1>
+        <h1 className={`${styles.heroTitle}`}>
+          Hi there! I'm&nbsp;David&nbsp;👋
+        </h1>
         <h3 className={`${styles.heroSubTitle}`}>
           I'm a <span className={`${styles.typed}`}></span>
         </h3>
