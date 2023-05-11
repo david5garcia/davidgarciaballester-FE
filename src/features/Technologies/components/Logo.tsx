@@ -32,7 +32,7 @@ const Logo = (props: {logo: ILogo}) => {
       className={`flex flex-col items-center justify-center gap-2`}
     >
       <img
-        src={`public/images/language logos/${props.logo.file}`}
+        src={`/images/language logos/${props.logo.file}`}
         alt=""
         className={`w-16`}
       />
