@@ -20,7 +20,7 @@ const ArrowLottie = () => {
   }, []);
   return (
     <div
-      className={`absolute sm:bottom-0 left-[calc(50%-4rem)] w-32 transition-all -bottom-2  ${
+      className={`absolute sm:bottom-0 left-[calc(50%-4rem)] w-32 transition-all -bottom-6 ${
         isAtTop ? "" : "hidden"
       }`}
     >
