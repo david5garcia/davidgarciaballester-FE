@@ -8,7 +8,28 @@
 }
 
 @media (max-width: 600px) {
+  .nav-items-container {
+    flex-direction: column;
+    padding: 10px 0;
+    line-height: normal;
+    gap: 3px;
+    position: absolute;
+    height: auto !important;
+    right: 10px;
+    top: 80px;
+    width: 100%;
+    background-color: #fdfbf7e3;
+    justify-content: end;
+    align-items: end!important;
+  }
   .nav-items {
+    margin-right: 0px !important;
+    font-size: larger;
+  }
+
+  .hiddenClass{
     display: none;
   }
 }
+
+

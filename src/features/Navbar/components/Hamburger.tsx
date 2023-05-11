@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../Hamburger.scss";
 
-export const Hamburger = () => {
+export const Hamburger = (props: any) => {
   const [isHamburgerOpened, setIsHamburgerOpened] = useState(false);
+
+  useEffect(() => {
+    props.handleHamburgerClick(isHamburgerOpened);
+  }, [isHamburgerOpened]);
 
   return (
     <button
