@@ -1,0 +1,55 @@
+.card-hidden-left {
+  transform: translateX(-100%);
+  opacity: 0;
+  //filter: blur(5px);
+  transition: all 1s;
+}
+
+.card-in-view-left {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 1s;
+}
+
+.card-hidden-right {
+  transform: translateX(100%);
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s;
+}
+
+.card-in-view-right {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 1s;
+}
+
+.card-hidden-down {
+  transform: translateY(-100%);
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s;
+}
+
+.card-in-view-down {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+  transition: all 1s;
+}
+
+.card-hidden-up {
+  transform: translateY(100%);
+  opacity: 0;
+  //filter: blur(5px);
+  transition: all 1s;
+}
+
+.card-in-view-up {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+  transition: all 1s;
+}

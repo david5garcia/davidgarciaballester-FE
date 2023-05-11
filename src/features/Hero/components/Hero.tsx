@@ -1,0 +1,25 @@
+import React, { useEffect, useRef, useState } from "react";
+import styles from "../Hero.module.scss";
+import Lottie from "lottie-react";
+import animationData from "../../../assets/arrow-down.json";
+import ArrowLottie from "./ArrowLottie";
+
+const Hero = () => {
+
+
+  return (
+    <div className={`${styles.heroContainer} mt-12`}>
+      <div>
+        <h1 className={`${styles.heroTitle}`}>Hi there! I'm David 👋</h1>
+        <h3 className={`${styles.heroSubTitle}`}>
+          I'm a <span className={`${styles.typed}`}></span>
+        </h3>
+      </div>
+
+      <img src="/src/assets/me.png" alt="" className={`${styles.image}`} />
+      <ArrowLottie />
+    </div>
+  );
+};
+
+export default Hero;

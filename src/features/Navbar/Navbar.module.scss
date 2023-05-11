@@ -1,0 +1,14 @@
+.nav-items:hover {
+  background: #303037;
+  transition: 1000ms;
+  color: white;
+}
+.nav-items {
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .nav-items {
+    display: none;
+  }
+}

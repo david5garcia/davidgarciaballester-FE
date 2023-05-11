@@ -1,0 +1,16 @@
+.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.logoContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 3rem 0;
+}
+
+@media (max-width: 768px) {
+  .logoContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
