@@ -1,0 +1,53 @@
+.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.cardTitle {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.projectContainer {
+  display: grid;
+  align-items: center;
+    margin-bottom: 5rem;
+}
+
+.projectCard {
+    padding: 2.5rem;
+}
+
+@media (min-width: 600px) {
+  .projectContainer {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+  }
+
+  .projectCardLeft {
+    margin-right: -3rem;
+    padding: 3rem;
+    padding-right: 6rem;
+    grid-column: span 4 / span 4;
+  }
+
+  .projectCardRight {
+    margin-left: -3rem;
+    padding: 3rem;
+    padding-left: 6rem;
+    grid-column: 4/8;
+  }
+
+  .projectImageRight {
+    object-fit: cover;
+    margin-left: -1rem;
+    grid-column: span 3 / span 3;
+  }
+
+  .projectImageLeft {
+    object-fit: cover;
+    margin-right: -1rem;
+    grid-column: 1/ 4;
+    grid-row: 1;
+  }
+}

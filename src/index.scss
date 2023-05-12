@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+$bg-color: #fdfbf7;
+$font-color: #303037;
+$accent-color: #8a2be2;
+
 body {
   font-family: "Inter", sans-serif;
-  background-color: #fdfbf7;
-  color: #303037;
+  background-color: $bg-color;
+  color: $font-color;
   margin: 0 10rem;
 }
 

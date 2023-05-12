@@ -1,35 +1,37 @@
-.card-hidden-left {
-  transform: translateX(-100%);
-  opacity: 0;
-  //filter: blur(5px);
-  transition: all 1s;
-}
+@media (min-width: 600px) {
+  .card-hidden-left {
+    transform: translateX(-100%);
+    opacity: 0;
+    //filter: blur(5px);
+    transition: all 1s;
+  }
 
-.card-in-view-left {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
-  transition: all 1s;
-}
+  .card-in-view-left {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 1s;
+  }
 
-.card-hidden-right {
-  transform: translateX(100%);
-  opacity: 0;
-  filter: blur(5px);
-  transition: all 1s;
-}
+  .card-hidden-right {
+    transform: translateX(100%);
+    opacity: 0;
+    //filter: blur(5px);
+    transition: all 1s;
+  }
 
-.card-in-view-right {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
-  transition: all 1s;
+  .card-in-view-right {
+    opacity: 1;
+    //filter: blur(0);
+    transform: translateX(0);
+    transition: all 1s;
+  }
 }
 
 .card-hidden-down {
   transform: translateY(-100%);
   opacity: 0;
-  filter: blur(5px);
+  //filter: blur(5px);
   transition: all 1s;
 }
 

@@ -1,3 +1,4 @@
+import { CSS, HTML, JAVA, JAVASCRIPT, MYSQL, PHP, PYTHON, REACT, TYPESCRIPT } from "../../../utils/constants";
 import styles from "../Technologies.module.scss";
 import Logo from "./Logo";
 
@@ -6,16 +7,16 @@ export interface ILogo {
   name: string;
 }
 
-const logos: ILogo[] = [
-  { file: "html.png", name: "HTML" },
-  { file: "css.png", name: "CSS" },
-  { file: "java-script.png", name: "Javascript" },
-  { file: "typescript.png", name: "Typescript" },
-  { file: "react.png", name: "React" },
-  { file: "java.png", name: "Java" },
-  { file: "python.png", name: "Python" },
-  { file: "php.png", name: "PHP" },
-  { file: "mysql.png", name: "MySQL" },
+export const logos: ILogo[] = [
+  { file: "html.png", name: HTML },
+  { file: "css.png", name: CSS },
+  { file: "java-script.png", name: JAVASCRIPT },
+  { file: "typescript.png", name: TYPESCRIPT },
+  { file: "react.png", name: REACT },
+  { file: "java.png", name: JAVA },
+  { file: "python.png", name: PYTHON },
+  { file: "php.png", name: PHP },
+  { file: "mysql.png", name: MYSQL},
 ];
 
 const Technologies = () => {
