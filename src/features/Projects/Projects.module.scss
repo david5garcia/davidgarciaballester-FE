@@ -10,11 +10,21 @@
 .projectContainer {
   display: grid;
   align-items: center;
-    margin-bottom: 5rem;
+  margin-bottom: 5rem;
 }
 
 .projectCard {
-    padding: 2.5rem;
+  padding: 2.5rem;
+}
+
+@media (max-width: 600px) {
+  .projectCard {
+    border-radius: 1rem 1rem 0 0 !important;
+  }
+  .projectImage {
+    border-radius: 0 0 1rem 1rem !important;
+    margin-top: -0.6rem !important;
+  }
 }
 
 @media (min-width: 600px) {
