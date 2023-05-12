@@ -16,40 +16,59 @@ const Project = ({ project, index }: { project: IProject; index: number }) => {
     )
       return;
 
-    const observer = new IntersectionObserver((entries) => {
+    const observerLeft = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           itemLeft.current!.classList.add("card-in-view-left");
           itemLeft.current!.classList.remove("card-hidden-left");
-          container.current!.classList.add("card-in-view-left-mobile");
-          container.current!.classList.remove("card-hidden-left-mobile");
-          itemRight.current!.classList.add("card-in-view-right");
-          itemRight.current!.classList.remove("card-hidden-right");
         } else {
           itemLeft.current!.classList.remove("card-in-view-left");
           itemLeft.current!.classList.add("card-hidden-left");
-          container.current!.classList.remove("card-in-view-left-mobile");
-          container.current!.classList.add("card-hidden-left-mobile");
+        }
+      });
+    });
+
+    const observerRight = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          itemRight.current!.classList.add("card-in-view-right");
+          itemRight.current!.classList.remove("card-hidden-right");
+        } else {
           itemRight.current!.classList.remove("card-in-view-right");
           itemRight.current!.classList.add("card-hidden-right");
         }
       });
     });
 
-    observer.observe(itemLeft.current);
-    observer.observe(itemRight.current);
-    observer.observe(container.current);
+    const observerTotal = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          container.current!.classList.add("card-in-view-left-mobile");
+          container.current!.classList.remove("card-hidden-left-mobile");
+        } else {
+          container.current!.classList.remove("card-in-view-left-mobile");
+          container.current!.classList.add("card-hidden-left-mobile");
+        }
+      });
+    });
+
+    observerLeft.observe(itemLeft.current);
+    observerRight.observe(itemRight.current);
+    observerTotal.observe(container.current);
 
     return () => {
-      observer.unobserve(itemLeft.current!);
-      observer.unobserve(itemRight.current!);
-      observer.unobserve(container.current!);
+      observerLeft.unobserve(itemLeft.current!);
+      observerRight.unobserve(itemRight.current!);
+      observerTotal.unobserve(container.current!);
     };
   }, []);
 
   const even = index % 2 === 0;
   return (
-    <div ref={container} className={`${styles.projectContainer} p-4 sm:p-12 pb-20`}>
+    <div
+      ref={container}
+      className={`${styles.projectContainer} p-4 sm:p-12 pb-20`}
+    >
       <div
         ref={even ? itemLeft : itemRight}
         className={`${
