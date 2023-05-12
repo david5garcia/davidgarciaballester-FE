@@ -1,4 +1,4 @@
-import { CSS, HTML, JAVA, JAVASCRIPT, MYSQL, PHP, PYTHON, REACT, TYPESCRIPT } from "../../../utils/constants";
+import { AWS, CSS, HTML, JAVA, JAVASCRIPT, MYSQL, PHP, PYTHON, REACT, TYPESCRIPT } from "../../../utils/constants";
 import styles from "../Technologies.module.scss";
 import Logo from "./Logo";
 
@@ -16,7 +16,8 @@ export const logos: ILogo[] = [
   { file: "java.png", name: JAVA },
   { file: "python.png", name: PYTHON },
   { file: "php.png", name: PHP },
-  { file: "mysql.png", name: MYSQL},
+  { file: "mysql.png", name: MYSQL },
+  { file: "aws.png", name: AWS },
 ];
 
 const Technologies = () => {
