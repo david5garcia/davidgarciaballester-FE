@@ -33,7 +33,7 @@ export const Navbar = () => {
         <span
           className={`${
             styles["nav-items"]
-          } px-5 py-2 rounded-lg mr-12 sm:inline  ${
+          } px-5 sm:py-2 pt-2 pb-32 rounded-lg mr-12 sm:inline  ${
             isHamburgerOpened ? "" : styles["hiddenClass"]
           }`}
         >
