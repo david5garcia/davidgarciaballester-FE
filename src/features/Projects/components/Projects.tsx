@@ -42,7 +42,7 @@ const projectList: IProject[] = [
 
 const Projects = () => {
   return (
-    <div className={`grid items-center text-center pt-96 mb-24`}>
+    <div id="projects" className={`grid items-center text-center mt-72 pt-20 mb-24`}>
       <h2 className={`${styles.title} pb-8`}>Projects</h2>
       <div className={`grid items-center text-center mt-10 overflow-hidden`}>
         {projectList.map((project, index) => {

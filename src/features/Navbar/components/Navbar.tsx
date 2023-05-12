@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "../Navbar.module.scss";
 import { Hamburger } from "./Hamburger";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 export const Navbar = () => {
   const [isHamburgerOpened, setIsHamburgerOpened] = useState(false);
@@ -18,21 +19,39 @@ export const Navbar = () => {
           styles["nav-items-container"]
         } ${isHamburgerOpened ? "" : styles["hiddenClass"]}`}
       >
-        <span
+        <Link
+          activeClass="active"
+          to="technologies"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
           className={`${styles["nav-items"]} px-5 py-2 rounded-lg sm:inline`}
         >
-          technologies
-        </span>
-        <span
+          <span>technologies</span>
+        </Link>
+        <Link
+          activeClass="active"
+          to="projects"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
           className={`${styles["nav-items"]} px-5 py-2 rounded-lg sm:inline`}
         >
-          projects
-        </span>
-        <span
+          <span>projects</span>
+        </Link>
+        <Link
+          activeClass="active"
+          to="about-me"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
           className={`${styles["nav-items"]} px-5 py-2 rounded-lg mr-12 sm:inline`}
         >
-          about me
-        </span>
+          <span>about me</span>
+        </Link>
       </div>
     </div>
   );

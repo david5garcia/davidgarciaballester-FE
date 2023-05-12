@@ -21,7 +21,10 @@ export const logos: ILogo[] = [
 
 const Technologies = () => {
   return (
-    <div className={`grid items-center text-center pt-96`}>
+    <div
+      id="technologies"
+      className={`grid items-center text-center mt-72 pt-20`}
+    >
       <h2 className={`${styles.title} pb-8`}>Technologies</h2>
       <div className={`${styles.logoContainer} mt-10 overflow-hidden`}>
         {logos.map((logo) => {
