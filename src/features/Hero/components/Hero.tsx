@@ -2,7 +2,7 @@ import styles from "../Hero.module.scss";
 
 const Hero = () => {
   return (
-    <div className={`${styles.heroContainer} sm:mt-12 mt-6`}>
+    <div className={`${styles.heroContainer} sm:mt-12`}>
       <div>
         <h1 className={`${styles.heroTitle}`}>
           Hi there! I'm David&nbsp;👋
@@ -10,7 +10,7 @@ const Hero = () => {
         <h3 className={`${styles.heroSubTitle}`}>
           I'm a <span className={`${styles.typed}`}></span>
         </h3>
-        <div className={`flex flex-row justify-left items-center gap-3 pt-4`}>
+        <div className={`flex flex-row justify-left items-center gap-3 sm:pt-4 pt-2`}>
           <a
             className={`${styles.buttonCv} flex flex-row justify-center items-center sm:hover:-translate-y-2 transition-all`}
             href="/files/CV en ingles.pdf"
