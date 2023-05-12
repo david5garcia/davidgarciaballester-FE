@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "../Navbar.module.scss";
 import { Hamburger } from "./Hamburger";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 export const Navbar = () => {
   const [isHamburgerOpened, setIsHamburgerOpened] = useState(false);
