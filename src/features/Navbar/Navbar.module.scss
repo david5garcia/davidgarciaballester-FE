@@ -21,6 +21,7 @@
     background-color: #fdfbf7e3;
     justify-content: end;
     align-items: end!important;
+    padding-bottom: 8rem;
   }
   .nav-items {
     margin-right: 0px !important;
@@ -28,7 +29,7 @@
   }
 
   .hiddenClass{
-    display: none;
+    display: none !important;
   }
 }
 

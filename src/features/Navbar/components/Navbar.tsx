@@ -14,28 +14,22 @@ export const Navbar = () => {
       <img id="main_logo" src="/images/logo.png" className="w-24" />
       <Hamburger handleHamburgerClick={onHamburgerClick} />
       <div
-        className={`flex h-10 items-center gap-2 ${styles["nav-items-container"]}`}
+        className={`flex h-10 items-center gap-2 ${
+          styles["nav-items-container"]
+        } ${isHamburgerOpened ? "" : styles["hiddenClass"]}`}
       >
         <span
-          className={`${styles["nav-items"]} px-5 py-2 rounded-lg sm:inline  ${
-            isHamburgerOpened ? "" : styles["hiddenClass"]
-          }`}
+          className={`${styles["nav-items"]} px-5 py-2 rounded-lg sm:inline`}
         >
           technologies
         </span>
         <span
-          className={`${styles["nav-items"]} px-5 py-2 rounded-lg sm:inlin  ${
-            isHamburgerOpened ? "" : styles["hiddenClass"]
-          }`}
+          className={`${styles["nav-items"]} px-5 py-2 rounded-lg sm:inline`}
         >
           projects
         </span>
         <span
-          className={`${
-            styles["nav-items"]
-          } px-5 sm:py-2 pt-2 pb-32 rounded-lg mr-12 sm:inline  ${
-            isHamburgerOpened ? "" : styles["hiddenClass"]
-          }`}
+          className={`${styles["nav-items"]} px-5 py-2 rounded-lg mr-12 sm:inline`}
         >
           about me
         </span>
