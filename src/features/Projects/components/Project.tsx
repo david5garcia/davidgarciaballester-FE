@@ -79,6 +79,13 @@ const Project = ({ project, index }: { project: IProject; index: number }) => {
       >
         <h3 className={`${styles.cardTitle}`}>{project.title}</h3>
         <p className="text-md text-left">{project.description}</p>
+        <a
+          href={project.link}
+          className="sm:hover:-translate-y-2 transition-all"
+          target="_blank"
+        >
+          <img src="/images/link.png" width={`40px`} alt="" />
+        </a>
         <div className="flex items-center gap-4 mt-4">
           {project.languages.map((language) => {
             const languageObj = logos.filter((logo) => logo.name === language);
