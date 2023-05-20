@@ -3,19 +3,15 @@ import { logos } from "../../Technologies/components/Technologies";
 import styles from "../Projects.module.scss";
 import { IProject } from "./Projects";
 
-const Project = ({ project, index }: { project: IProject; index: number }) => {
-  const itemLeft = useRef<any>(null);
-  const itemRight = useRef<any>(null);
-  const container = useRef<any>(null);
+const Project: React.FC<{ project: IProject; index: number }> = ({
+  project,
+  index
+}) => {
+  const itemLeft = useRef<HTMLDivElement>(null);
+  const itemRight = useRef<HTMLDivElement>(null);
+  const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (
-      itemRight.current === null ||
-      itemLeft.current === null ||
-      container.current === null
-    )
-      return;
-
     const observerLeft = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -52,9 +48,9 @@ const Project = ({ project, index }: { project: IProject; index: number }) => {
       });
     });
 
-    observerLeft.observe(itemLeft.current);
-    observerRight.observe(itemRight.current);
-    observerTotal.observe(container.current);
+    observerLeft.observe(itemLeft.current!);
+    observerRight.observe(itemRight.current!);
+    observerTotal.observe(container.current!);
 
     return () => {
       observerLeft.unobserve(itemLeft.current!);
@@ -103,14 +99,14 @@ const Project = ({ project, index }: { project: IProject; index: number }) => {
           })}
         </div>
       </div>
-      <img
+      <div
         ref={even ? itemRight : itemLeft}
-        src={project.image}
         className={`${
           even ? styles.projectImageRight : styles.projectImageLeft
         } ${styles.projectImage} rounded-2xl z-10 shadow-xl sm:shadow-lg`}
-        alt=""
-      />
+      >
+        <img src={project.image} alt="" />
+      </div>
     </div>
   );
 };
