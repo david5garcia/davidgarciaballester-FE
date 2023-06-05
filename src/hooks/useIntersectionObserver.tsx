@@ -3,6 +3,12 @@ import { useEffect, useRef } from "react";
 interface Props {
   direction: string;
 }
+
+const options = {
+  root: null,
+  rootMargin: "0px",
+};
+
 const useIntersectionObserver = <T extends HTMLElement>({
   direction
 }: Props) => {
@@ -21,7 +27,7 @@ const useIntersectionObserver = <T extends HTMLElement>({
           elementRef.current!.classList.add(`card-hidden-${direction}`);
         }
       });
-    });
+    }, options);
 
     observer.observe(elementRef.current);
 
