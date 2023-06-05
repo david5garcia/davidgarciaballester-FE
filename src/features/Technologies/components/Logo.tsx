@@ -1,30 +1,10 @@
-import { useEffect, useRef } from "react";
 import { ILogo } from "./Technologies";
+import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
 
-const Logo = (props: {logo: ILogo}) => {
-  const logoRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (logoRef.current === null) return;
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          logoRef.current!.classList.add("card-in-view-up");
-          logoRef.current!.classList.remove("card-hidden-up");
-        } else {
-          logoRef.current!.classList.remove("card-in-view-up");
-          logoRef.current!.classList.add("card-hidden-up");
-        }
-      }); 
-    });
-
-    observer.observe(logoRef.current);
-
-    return () => {
-      observer.unobserve(logoRef.current!);
-    };
-  }, []);
+const Logo = (props: { logo: ILogo }) => {
+  const { elementRef: logoRef } = useIntersectionObserver<HTMLDivElement>({
+    direction: "up"
+  });
 
   return (
     <div

@@ -1,63 +1,21 @@
-import { useEffect, useRef } from "react";
 import { logos } from "../../Technologies/components/Technologies";
 import styles from "../Projects.module.scss";
 import { IProject } from "./Projects";
+import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
 
 const Project: React.FC<{ project: IProject; index: number }> = ({
   project,
   index
 }) => {
-  const itemLeft = useRef<HTMLDivElement>(null);
-  const itemRight = useRef<HTMLDivElement>(null);
-  const container = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observerLeft = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          itemLeft.current!.classList.add("card-in-view-left");
-          itemLeft.current!.classList.remove("card-hidden-left");
-        } else {
-          itemLeft.current!.classList.remove("card-in-view-left");
-          itemLeft.current!.classList.add("card-hidden-left");
-        }
-      });
-    });
-
-    const observerRight = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          itemRight.current!.classList.add("card-in-view-right");
-          itemRight.current!.classList.remove("card-hidden-right");
-        } else {
-          itemRight.current!.classList.remove("card-in-view-right");
-          itemRight.current!.classList.add("card-hidden-right");
-        }
-      });
-    });
-
-    const observerTotal = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          container.current!.classList.add("card-in-view-left-mobile");
-          container.current!.classList.remove("card-hidden-left-mobile");
-        } else {
-          container.current!.classList.remove("card-in-view-left-mobile");
-          container.current!.classList.add("card-hidden-left-mobile");
-        }
-      });
-    });
-
-    observerLeft.observe(itemLeft.current!);
-    observerRight.observe(itemRight.current!);
-    observerTotal.observe(container.current!);
-
-    return () => {
-      observerLeft.unobserve(itemLeft.current!);
-      observerRight.unobserve(itemRight.current!);
-      observerTotal.unobserve(container.current!);
-    };
-  }, []);
+  const { elementRef: itemLeft } = useIntersectionObserver<HTMLDivElement>({
+    direction: "left"
+  });
+  const { elementRef: itemRight } = useIntersectionObserver<HTMLDivElement>({
+    direction: "right"
+  });
+  const { elementRef: container } = useIntersectionObserver<HTMLDivElement>({
+    direction: "left-mobile"
+  });
 
   const even = index % 2 === 0;
   return (
