@@ -20,7 +20,7 @@ const Project: React.FC<{ project: IProject; index: number }> = ({
   const even = index % 2 === 0;
   return (
     <div
-      ref={container}
+      //ref={container}
       className={`${styles.projectContainer} p-4 sm:p-12 pb-20`}
     >
       <div
