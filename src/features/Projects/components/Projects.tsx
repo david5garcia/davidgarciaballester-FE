@@ -7,7 +7,7 @@ import {
   MYSQL,
   AWS,
   TYPESCRIPT,
-  JAVA,
+  JAVA
 } from "../../../utils/constants";
 import styles from "../Projects.module.scss";
 import Project from "./Project";
@@ -29,25 +29,33 @@ const projectList: IProject[] = [
     image: "/images/tomonota.png",
     link: "https://tomonota.com/",
     status: "Active",
-    languages: [HTML, CSS, JAVASCRIPT, REACT, MYSQL, PHP, AWS],
+    languages: [HTML, CSS, JAVASCRIPT, REACT, MYSQL, PHP, AWS]
   },
   {
     title: "Baseball Spain",
     description:
       "Android app to view the latest news, scores, and standings of the Spanish Baseball League.",
     image: "/images/baseball.png",
-    link: "https://tomonota.com/",
+    link: "https://play.google.com/store/apps/details?id=davidgb.baseballspain",
     status: "Active",
-    languages: [JAVA],
+    languages: [JAVA]
+  },
+  {
+    title: "SmallerUrl",
+    description: "Create shorter URLs with SmallerUrl.",
+    image: "/images/travelexpenses.png",
+    link: "https://smallerurl.vercel.app/",
+    status: "Active",
+    languages: [HTML, CSS, TYPESCRIPT, REACT]
   },
   {
     title: "TravelExpenses",
     description: "Track your travel expenses and export them to a CSV file.",
     image: "/images/travelexpenses.png",
-    link: "https://tomonota.com/",
+    link: "https://travelexpenses.vercel.app",
     status: "Active",
-    languages: [HTML, CSS, TYPESCRIPT, REACT],
-  },
+    languages: [HTML, CSS, TYPESCRIPT, REACT]
+  }
 ];
 
 const Projects = () => {
