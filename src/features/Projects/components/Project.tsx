@@ -2,6 +2,7 @@ import { logos } from "../../Technologies/components/Technologies";
 import styles from "../Projects.module.scss";
 import { IProject } from "./Projects";
 import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
+import useIsMobile from "../../../hooks/useIsMobile";
 
 const Project: React.FC<{ project: IProject; index: number }> = ({
   project,
@@ -13,11 +14,14 @@ const Project: React.FC<{ project: IProject; index: number }> = ({
   const { elementRef: itemRight } = useIntersectionObserver<HTMLDivElement>({
     direction: "right"
   });
-  const { elementRef: container } = useIntersectionObserver<HTMLDivElement>({
-    direction: "left-mobile"
-  });
+  // const { elementRef: container } = useIntersectionObserver<HTMLDivElement>({
+  //   direction: "left-mobile"
+  // });
+  const {isMobile} = useIsMobile();
 
-  const even = index % 2 === 0;
+
+
+  const even = isMobile ? true : index % 2 === 0;
   return (
     <div
       //ref={container}
