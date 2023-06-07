@@ -1,4 +1,3 @@
-import { Link } from "react-scroll";
 import MainTitle from "../../../components/MainTitle";
 import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
 
