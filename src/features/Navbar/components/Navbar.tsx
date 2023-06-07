@@ -21,6 +21,17 @@ export const Navbar = () => {
       >
         <Link
           activeClass="active"
+          to="aboutme"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className={`${styles["nav-items"]} px-5 py-2 rounded-lg sm:inline`}
+        >
+          <span>about me</span>
+        </Link>
+        <Link
+          activeClass="active"
           to="technologies"
           spy={true}
           smooth={true}
@@ -37,20 +48,9 @@ export const Navbar = () => {
           smooth={true}
           offset={-70}
           duration={500}
-          className={`${styles["nav-items"]} px-5 py-2 rounded-lg sm:inline`}
+          className={`${styles["nav-items"]} px-5 py-2 rounded-lg sm:inline  mr-12`}
         >
           <span>projects</span>
-        </Link>
-        <Link
-          activeClass="active"
-          to="about-me"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className={`${styles["nav-items"]} px-5 py-2 rounded-lg mr-12 sm:inline`}
-        >
-          <span>about me</span>
         </Link>
       </div>
     </div>

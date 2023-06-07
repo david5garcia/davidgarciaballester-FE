@@ -1,3 +1,4 @@
+import MainTitle from "../../../components/MainTitle";
 import {
   CSS,
   HTML,
@@ -43,7 +44,7 @@ const projectList: IProject[] = [
   {
     title: "SmallerUrl",
     description: "Create shorter URLs with SmallerUrl.",
-    image: "/images/travelexpenses.png",
+    image: "/images/smallerurl.png",
     link: "https://smallerurl.vercel.app/",
     status: "Active",
     languages: [HTML, CSS, TYPESCRIPT, REACT]
@@ -64,7 +65,7 @@ const Projects = () => {
       id="projects"
       className={`grid items-center text-center mt-72 pt-20 mb-24`}
     >
-      <h2 className={`${styles.title} pb-8`}>Projects</h2>
+      <MainTitle>Projects</MainTitle>
       <div className={`grid items-center text-center mt-10 overflow-hidden`}>
         {projectList.map((project, index) => {
           return <Project project={project} index={index} />;
