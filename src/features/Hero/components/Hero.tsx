@@ -3,7 +3,7 @@ import styles from "../Hero.module.scss";
 const Hero = () => {
   return (
     <div className={`${styles.heroContainer} sm:mt-12`}>
-      <div className="px-6 sm:px-0">
+      <div className="px-6 sm:px-0 animate-fade-right animate-once animate-delay-500 animate-ease-linear">
         <h1 className={`${styles.heroTitle}`}>Hi there! I'm David&nbsp;👋</h1>
         <h3 className={`${styles.heroSubTitle}`}>
           I'm a <span className={`${styles.typed}`}></span>
@@ -38,7 +38,11 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <img src="/images/me.png" alt="" className={`${styles.image}`} />
+      <img
+        src="/images/me.png"
+        alt=""
+        className={`${styles.image} animate-fade-left animate-once animate-delay-500 animate-ease-linear`}
+      />
     </div>
   );
 };

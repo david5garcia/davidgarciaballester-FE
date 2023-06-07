@@ -11,7 +11,7 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex justify-between items-center animate-fade-down animate-once animate-delay-500 animate-ease-linear">
       <img id="main_logo" src="/images/logo.png" className="w-24" />
       <Hamburger handleHamburgerClick={onHamburgerClick} />
       <div
