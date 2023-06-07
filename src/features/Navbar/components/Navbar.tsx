@@ -11,11 +11,11 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="flex justify-between items-center animate-fade-down animate-once animate-delay-500 animate-ease-linear">
+    <div className="flex justify-between items-center md:animate-fade-down md:animate-once md:animate-delay-500 md:animate-ease-linear)">
       <img id="main_logo" src="/images/logo.png" className="w-24" />
       <Hamburger handleHamburgerClick={onHamburgerClick} />
       <div
-        className={`flex h-10 items-center gap-2 ${
+        className={`flex z-10 h-10 items-center gap-2 ${
           styles["nav-items-container"]
         } ${isHamburgerOpened ? "" : styles["hiddenClass"]}`}
       >
