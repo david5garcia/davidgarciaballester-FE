@@ -25,12 +25,10 @@ const AboutMe = () => {
           In my free time I love reading (I'm currently devouring everything
           Brandon Sanderson), and I also love playing sports: baseball,
           handball, tennis and padel being my favourites.
-        </p>
-        <p className="text-lg mt-6">
+
           For any job opportunities, projects or if you just want to chat, feel
           free to{" "}
           <span className="text-[#8a2be2] font-semibold">
-            {" "}
             <a
               href="mailto:davidgballester@gmail.com"
               className="sm:hover:-translate-y-2 transition-all"
