@@ -45,6 +45,12 @@
   color: white;
 }
 
+@media (min-width: 768px) {
+  .heroContainer {
+    height: calc(100vh - 96px * 2);
+  }
+}
+
 @media (max-width: 768px) {
   .heroContainer {
     grid-template-columns: 1fr;
