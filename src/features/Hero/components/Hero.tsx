@@ -1,8 +1,10 @@
+import { useState } from "react";
 import styles from "../Hero.module.scss";
 
 const Hero = () => {
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
   return (
-    <div className={`${styles.heroContainer} sm:mt-12`}>
+    <div className={`${styles.heroContainer} sm:mt-12 sm:min-h-max`}>
       <div className="px-6 sm:px-0 animate-fade-right animate-once animate-delay-500 animate-ease-linear">
         <h1 className={`${styles.heroTitle}`}>Hi there! I'm David&nbsp;👋</h1>
         <h3 className={`${styles.heroSubTitle}`}>
@@ -38,10 +40,13 @@ const Hero = () => {
           </a>
         </div>
       </div>
+      {!isImageLoaded && <div className="h-[50rem]"></div>}
       <img
         src="/images/me.png"
         alt=""
+        placeholder="image of me"
         className={`${styles.image} animate-fade-left animate-once animate-delay-500 animate-ease-linear`}
+        onLoad={()=>setIsImageLoaded(true)}
       />
     </div>
   );
