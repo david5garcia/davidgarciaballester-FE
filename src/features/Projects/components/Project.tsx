@@ -22,18 +22,20 @@ const Project: React.FC<{ project: IProject; index: number }> = ({
           even ? styles.projectCardLeft : styles.projectCardRight
         } ${
           styles.projectCard
-        } min-h-[400px] rounded-2xl shadow-xl sm:shadow-xl bg-white flex justify-between items-start flex-col relative}`}
+        } min-h-[350px] rounded-2xl shadow-xl sm:shadow-xl bg-white flex justify-between items-start flex-col relative}`}
       >
-        <h3 className={`${styles.cardTitle}`}>{project.title}</h3>
-        <p className="text-md text-left">{project.description}</p>
-        {<a
-          href={project.link}
-          className="sm:hover:-translate-y-2 transition-all pt-3"
-          target="_blank"
-        >
-          <img src="/images/link-web.png" width={`40px`} alt="" />
-        </a>}
+        <h3 className={`${styles.cardTitle} flex items-center gap-3`}>
+          {project.title}
 
+          <a
+            href={project.link}
+            className=""
+            target="_blank"
+          >
+            <img src="/images/link-web.png" width={`34px`} alt="" />
+          </a>
+        </h3>
+        <p className="text-md text-left">{project.description}</p>
         <div className="flex items-center gap-4 mt-4">
           {project.languages.map((language) => {
             const languageObj = logos.filter((logo) => logo.name === language);
