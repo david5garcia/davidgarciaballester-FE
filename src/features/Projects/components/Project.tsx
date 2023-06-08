@@ -22,7 +22,7 @@ const Project: React.FC<{ project: IProject; index: number }> = ({
           even ? styles.projectCardLeft : styles.projectCardRight
         } ${
           styles.projectCard
-        } min-h-[350px] rounded-2xl shadow-xl sm:shadow-xl bg-white flex justify-between items-start flex-col relative}`}
+        } min-h-[350px] rounded-2xl shadow-xl sm:shadow-xl bg-white flex justify-evenly items-start flex-col relative}`}
       >
         <h3 className={`${styles.cardTitle} flex items-center gap-3`}>
           {project.title}
