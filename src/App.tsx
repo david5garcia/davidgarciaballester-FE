@@ -9,6 +9,8 @@ import ArrowLottie from "./features/Hero/components/ArrowLottie";
 import { useEffect } from "react";
 import ReactGA from "react-ga";
 
+ReactGA.initialize("G-9JC19HLV3C");
+
 function App() {
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
