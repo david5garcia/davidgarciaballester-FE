@@ -27,14 +27,16 @@ const Project: React.FC<{ project: IProject; index: number }> = ({
         <h3 className={`${styles.cardTitle} flex items-center gap-3`}>
           {project.title}
 
-          <a
-            href={project.link}
-            className=""
-            target="_blank"
-          >
+          <a href={project.link} className="" target="_blank">
             <img src="/images/link-web.png" width={`34px`} alt="" />
           </a>
         </h3>
+        <div className=" ">
+          <p className="text-md text-left mb-4 bg-[#cdc6b96b]  rounded-md px-4 py-2">
+            {project.status === "Active" ? "🟢 " : "🟠 "}
+            {project.status}
+          </p>
+        </div>
         <p className="text-md text-left">{project.description}</p>
         <div className="flex items-center gap-4 mt-4">
           {project.languages.map((language) => {

@@ -29,7 +29,7 @@ const projectList: IProject[] = [
     image: "/images/tomonota.png",
     link: "https://tomonota.com/",
     status: "Active",
-    languages: [HTML, CSS, JAVASCRIPT, REACT, MYSQL, PHP, AWS]
+    languages: [HTML, CSS, JAVASCRIPT, REACT, MYSQL, PHP, AWS],
   },
   {
     title: "Baseball Spain",
@@ -38,23 +38,23 @@ const projectList: IProject[] = [
     image: "/images/baseball.png",
     link: "https://play.google.com/store/apps/details?id=davidgb.baseballspain",
     status: "Active",
-    languages: [JAVA]
+    languages: [JAVA],
   },
   {
     title: "SmallerUrl",
     description: "Create shorter URLs with SmallerUrl.",
     image: "/images/smallerurl.png",
     link: "https://smallerurl.vercel.app/",
-    status: "Active",
-    languages: [HTML, CSS, TYPESCRIPT, REACT]
+    status: "WIP",
+    languages: [HTML, CSS, TYPESCRIPT, REACT],
   },
   {
     title: "TravelExpenses",
     description: "Track your travel expenses and export them to a CSV file.",
     image: "/images/travelexpenses.png",
     link: "https://travelexpenses.vercel.app",
-    status: "Active",
-    languages: [HTML, CSS, TYPESCRIPT, REACT]
+    status: "WIP",
+    languages: [HTML, CSS, TYPESCRIPT, REACT],
   }
 ];
 
