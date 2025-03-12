@@ -23,7 +23,7 @@ const AboutMe = () => {
               Full Stack Developer
             </a>
           </span>{" "}
-          at Amazon. Born and raised in Valencia, I have always been passionate
+          at TUI. Born and raised in Valencia, I have always been passionate
           about technology and programming. I studied Telecom Engineering, and
           am currently studying a Masters in Web Development.
         </p>
