@@ -1,14 +1,14 @@
 import MainTitle from "../../../components/MainTitle";
 import {
+  AWS,
   CSS,
   HTML,
+  JAVA,
   JAVASCRIPT,
+  MYSQL,
   PHP,
   REACT,
-  MYSQL,
-  AWS,
   TYPESCRIPT,
-  JAVA
 } from "../../../utils/constants";
 import Project from "./Project";
 
@@ -30,6 +30,15 @@ const projectList: IProject[] = [
     link: "https://tomonota.com/",
     status: "Active",
     languages: [HTML, CSS, JAVASCRIPT, REACT, MYSQL, PHP, AWS],
+  },
+  {
+    title: "FlashcardsAI",
+    description:
+      "FlashcardsAI is an educational platform for learning English that uses digital flashcards and artificial intelligence (AI) to make learning more dynamic and engaging.",
+    image: "/images/flashcardsai.png",
+    link: "https://flashcardsai.app/",
+    status: "Active",
+    languages: [HTML, CSS, JAVASCRIPT, REACT],
   },
   {
     title: "Baseball Spain",
@@ -55,7 +64,7 @@ const projectList: IProject[] = [
     link: "https://travelexpenses.vercel.app",
     status: "WIP",
     languages: [HTML, CSS, TYPESCRIPT, REACT],
-  }
+  },
 ];
 
 const Projects = () => {
