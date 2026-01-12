@@ -8,7 +8,7 @@ import {
   MYSQL,
   PHP,
   REACT,
-  TYPESCRIPT,
+  TYPESCRIPT
 } from "../../../utils/constants";
 import Project from "./Project";
 
@@ -29,7 +29,16 @@ const projectList: IProject[] = [
     image: "/images/tomonota.png",
     link: "https://tomonota.com/",
     status: "Active",
-    languages: [HTML, CSS, JAVASCRIPT, REACT, MYSQL, PHP, AWS],
+    languages: [HTML, CSS, JAVASCRIPT, REACT, MYSQL, PHP, AWS]
+  },
+  {
+    title: "FBSCV - Acta digital",
+    description:
+      "This is website built for the Valencian Baseball Federation, that needed a website to generate PDFs with the result of a game.",
+    image: "/images/fbscv.png",
+    link: "https://fbscv-actadigital.vercel.app/",
+    status: "Active",
+    languages: [HTML, CSS, JAVASCRIPT, REACT, MYSQL, AWS]
   },
   {
     title: "FlashcardsAI",
@@ -38,7 +47,7 @@ const projectList: IProject[] = [
     image: "/images/flashcardsai.png",
     link: "https://flashcardsai.app/",
     status: "Active",
-    languages: [HTML, CSS, JAVASCRIPT, REACT],
+    languages: [HTML, CSS, JAVASCRIPT, REACT]
   },
   {
     title: "Baseball Spain",
@@ -47,7 +56,7 @@ const projectList: IProject[] = [
     image: "/images/baseball.png",
     link: "https://play.google.com/store/apps/details?id=davidgb.baseballspain",
     status: "Active",
-    languages: [JAVA],
+    languages: [JAVA]
   },
   {
     title: "SmallerUrl",
@@ -55,7 +64,7 @@ const projectList: IProject[] = [
     image: "/images/smallerurl.png",
     link: "https://smallerurl.vercel.app/",
     status: "WIP",
-    languages: [HTML, CSS, TYPESCRIPT, REACT],
+    languages: [HTML, CSS, TYPESCRIPT, REACT]
   },
   {
     title: "TravelExpenses",
@@ -63,8 +72,8 @@ const projectList: IProject[] = [
     image: "/images/travelexpenses.png",
     link: "https://travelexpenses.vercel.app",
     status: "WIP",
-    languages: [HTML, CSS, TYPESCRIPT, REACT],
-  },
+    languages: [HTML, CSS, TYPESCRIPT, REACT]
+  }
 ];
 
 const Projects = () => {
