@@ -45,7 +45,7 @@ const projectList: IProject[] = [
     description:
       "FlashcardsAI is an educational platform for learning English that uses digital flashcards and artificial intelligence (AI) to make learning more dynamic and engaging.",
     image: "/images/flashcardsai.png",
-    link: "https://flashcardsai.app/",
+    link: "https://flashcards-aix.vercel.app",
     status: "Active",
     languages: [HTML, CSS, JAVASCRIPT, REACT]
   },
