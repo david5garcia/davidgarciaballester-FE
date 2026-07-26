@@ -1,21 +1,25 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "../Hamburger.scss";
 
-export const Hamburger = (props: any) => {
+interface HamburgerProps {
+  handleHamburgerClick: (isOpen: boolean) => void;
+}
+
+export const Hamburger = ({ handleHamburgerClick }: HamburgerProps) => {
   const [isHamburgerOpened, setIsHamburgerOpened] = useState(false);
 
-  useEffect(() => {
-    props.handleHamburgerClick(isHamburgerOpened);
-  }, [isHamburgerOpened]);
+  const toggleMenu = () => {
+    const nextState = !isHamburgerOpened;
+    setIsHamburgerOpened(nextState);
+    handleHamburgerClick(nextState);
+  };
 
   return (
     <button
       className={`hamburger-menu ${
         isHamburgerOpened ? "hamburger-opened" : ""
       }`}
-      onClick={() =>
-        setIsHamburgerOpened((isHamburgerOpened) => !isHamburgerOpened)
-      }
+      onClick={toggleMenu}
       aria-label="Main Menu"
     >
       <svg width="60" height="60" viewBox="0 0 100 100">

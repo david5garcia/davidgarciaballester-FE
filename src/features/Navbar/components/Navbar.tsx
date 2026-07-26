@@ -12,7 +12,7 @@ export const Navbar = () => {
 
   return (
     <div className="flex justify-between items-center md:animate-fade-down md:animate-once md:animate-delay-500 md:animate-ease-linear)">
-      <img id="main_logo" src="/images/logo.png" className="w-24" />
+      <img id="main_logo" src="/images/logo.png" className="w-24" alt="David García Ballester logo" />
       <Hamburger handleHamburgerClick={onHamburgerClick} />
       <div
         className={`flex z-10 h-10 items-center gap-2 ${
@@ -32,6 +32,17 @@ export const Navbar = () => {
         </Link>
         <Link
           activeClass="active"
+          to="experience"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className={`${styles["nav-items"]} px-5 py-2 rounded-lg sm:inline`}
+        >
+          <span>experience</span>
+        </Link>
+        <Link
+          activeClass="active"
           to="technologies"
           spy={true}
           smooth={true}
@@ -48,7 +59,7 @@ export const Navbar = () => {
           smooth={true}
           offset={-70}
           duration={500}
-          className={`${styles["nav-items"]} px-5 py-2 rounded-lg sm:inline  mr-12`}
+          className={`${styles["nav-items"]} px-5 py-2 rounded-lg sm:inline mr-4`}
         >
           <span>projects</span>
         </Link>

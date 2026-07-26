@@ -2,45 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-$bg-color: #fdfbf7;
-$font-color: #303037;
-$accent-color: #8a2be2;
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  font-family: "Inter", sans-serif;
-  background-color: $bg-color;
-  color: $font-color;
-  //margin: 0 10rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
-#root {
-  max-width: min(70rem, 95%);
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-* {
-  overflow-x: hidden;
+img {
+  max-width: 100%;
 }
 
-@media (max-width: 768px) {
-  body {
-   // margin: 0 2rem;
-  }
-}
-
-
-/* scrollbar */
-body::-webkit-scrollbar {
-  width: 10px;
-}
-
-body::-webkit-scrollbar-track {
-  background: #fff;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: #8a2be2;
+:focus-visible {
+  outline: 3px solid #8a2be2;
+  outline-offset: 3px;
 }

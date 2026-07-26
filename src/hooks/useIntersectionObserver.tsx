@@ -6,7 +6,8 @@ interface Props {
 
 const options = {
   root: null,
-  rootMargin: "0px",
+  rootMargin: "0px 0px -50px",
+  threshold: 0.08,
 };
 
 const useIntersectionObserver = <T extends HTMLElement>({
@@ -15,26 +16,35 @@ const useIntersectionObserver = <T extends HTMLElement>({
   const elementRef = useRef<T>(null);
 
   useEffect(() => {
-    if (elementRef.current === null) return;
+    const element = elementRef.current;
+    if (element === null) return;
+
+    const hiddenClass = `card-hidden-${direction}`;
+    const visibleClass = `card-in-view-${direction}`;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      element.classList.add(visibleClass);
+      return;
+    }
+
+    element.classList.add(hiddenClass);
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          elementRef.current!.classList.add(`card-in-view-${direction}`);
-          elementRef.current!.classList.remove(`card-hidden-${direction}`);
-        } else {
-          elementRef.current!.classList.remove(`card-in-view-${direction}`);
-          elementRef.current!.classList.add(`card-hidden-${direction}`);
-        }
+        if (!entry.isIntersecting) return;
+
+        element.classList.add(visibleClass);
+        element.classList.remove(hiddenClass);
+        observer.unobserve(element);
       });
     }, options);
 
-    observer.observe(elementRef.current);
+    observer.observe(element);
 
     return () => {
-      observer.unobserve(elementRef.current!);
+      observer.unobserve(element);
     };
-  }, []);
+  }, [direction]);
 
   return { elementRef };
 };

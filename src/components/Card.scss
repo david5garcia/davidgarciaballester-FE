@@ -1,5 +1,5 @@
 .card-hidden-left {
-  transform: translateX(-100%);
+  transform: translateX(-60px);
   opacity: 0;
   //filter: blur(5px);
   transition: all 1s;
@@ -13,7 +13,7 @@
 }
 
 .card-hidden-right {
-  transform: translateX(100%);
+  transform: translateX(60px);
   opacity: 0;
   //filter: blur(5px);
   transition: all 1s;
@@ -27,7 +27,7 @@
 }
 
 .card-hidden-down {
-  transform: translateY(-100%);
+  transform: translateY(-45px);
   opacity: 0;
   //filter: blur(5px);
   transition: all 1s;
@@ -41,7 +41,7 @@
 }
 
 .card-hidden-up {
-  transform: translateY(100%);
+  transform: translateY(45px);
   opacity: 0;
   //filter: blur(5px);
   transition: all 1s;

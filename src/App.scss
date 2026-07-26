@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$bg-color: #fdfbf7;
+$font-color: #303037;
+$accent-color: #8a2be2;
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: $bg-color;
+  color: $font-color;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#root {
+  max-width: min(70rem, 95%);
+}
+
+html,
+body {
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+/* scrollbar */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #8a2be2;
+}

@@ -25,7 +25,7 @@ const projectList: IProject[] = [
   {
     title: "Tomonota",
     description:
-      "Have you ever sat down at a table and wish you could just order your food and drinks without having to wait for a server? \n Tomonota is a mobile app that allows you to do just that. Just scan the scannable QR code at your table and you can order your food and drinks right from your phone.",
+      "A mobile-first ordering experience that lets guests scan a QR code, browse the menu and order directly from their table.",
     image: "/images/tomonota.png",
     link: "https://tomonota.com/",
     status: "Active",
@@ -34,7 +34,7 @@ const projectList: IProject[] = [
   {
     title: "FBSCV - Acta digital",
     description:
-      "This is website built for the Valencian Baseball Federation, that needed a website to generate PDFs with the result of a game.",
+      "A purpose-built workflow for the Valencian Baseball Federation to record games and generate official PDF reports.",
     image: "/images/fbscv.png",
     link: "https://fbscv-actadigital.vercel.app/",
     status: "Active",
@@ -80,12 +80,16 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className={`grid items-center text-center mt-72 pt-20 mb-24`}
+      className={`grid items-center text-center mt-36 md:mt-44 pt-16 mb-24`}
     >
       <MainTitle>Projects</MainTitle>
-      <div className={`grid items-center text-center mt-10 overflow-hidden`}>
+      <p className="max-w-[42rem] mx-auto text-lg text-[#5b5b63] px-4">
+        Independent projects where I explore useful ideas across hospitality,
+        education and sport.
+      </p>
+      <div className={`grid items-center text-center mt-10`}>
         {projectList.map((project, index) => {
-          return <Project project={project} index={index} />;
+          return <Project key={project.title} project={project} index={index} />;
         })}
       </div>
     </div>

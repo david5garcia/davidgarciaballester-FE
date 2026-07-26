@@ -13,24 +13,30 @@ const Card = ({
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (cardRef.current === null) return;
+    const card = cardRef.current;
+    if (card === null) return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      card.classList.add("card-in-view");
+      return;
+    }
+
+    card.classList.add("card-hidden");
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          cardRef.current!.classList.add("card-in-view");
-          cardRef.current!.classList.remove("card-hidden");
-        } else {
-          cardRef.current!.classList.remove("card-in-view");
-          cardRef.current!.classList.add("card-hidden");
-        }
+        if (!entry.isIntersecting) return;
+
+        card.classList.add("card-in-view");
+        card.classList.remove("card-hidden");
+        observer.unobserve(card);
       });
     });
 
-    observer.observe(cardRef.current);
+    observer.observe(card);
 
     return () => {
-      observer.unobserve(cardRef.current!);
+      observer.unobserve(card);
     };
   }, []);
 

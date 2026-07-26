@@ -41,11 +41,12 @@ const Project: React.FC<{ project: IProject; index: number }> = ({
         <div className="flex items-center gap-4 mt-4">
           {project.languages.map((language) => {
             const languageObj = logos.filter((logo) => logo.name === language);
-            if (languageObj.length === 0) return <></>;
+            if (languageObj.length === 0) return null;
             const languageSrc = languageObj[0].file;
 
             return (
               <img
+                key={language}
                 width={30}
                 src={`/images/language logos/${languageSrc}`}
                 alt={language}

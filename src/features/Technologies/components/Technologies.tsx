@@ -7,6 +7,7 @@ export interface ILogo {
   name: string;
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const logos: ILogo[] = [
   { file: "html.png", name: HTML },
   { file: "css.png", name: CSS },
@@ -24,12 +25,16 @@ const Technologies = () => {
   return (
     <div
       id="technologies"
-      className={`grid items-center text-center mt-72 pt-20`}
+      className={`grid items-center text-center mt-36 md:mt-44 pt-16`}
     >
       <h2 className={`${styles.title} pb-8`}>Technologies</h2>
-      <div className={`${styles.logoContainer} mt-10 overflow-hidden`}>
+      <p className="max-w-[42rem] mx-auto text-lg text-[#5b5b63] px-4">
+        My current work centres on Java, Spring Boot, Next.js, React,
+        Kubernetes and AWS, supported by a broad full-stack toolkit.
+      </p>
+      <div className={`${styles.logoContainer} mt-10`}>
         {logos.map((logo) => {
-          return <Logo logo={logo} />;
+          return <Logo key={logo.name} logo={logo} />;
         })}
       </div>
     </div>
